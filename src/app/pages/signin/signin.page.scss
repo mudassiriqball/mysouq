@@ -17,7 +17,9 @@
     }
     
     .logo img {
-        width: 40%;
+        width: 30%;
+        padding: 0em;
+        margin: 0em;
     }
     
     // Gmail and Facebook Buttons styles
@@ -44,7 +46,7 @@
     .line {
         display: flex;
         justify-content: center;
-        color: rgb(114, 93, 167);
+        color: rgb(216, 115, 0);
         font-size: smaller;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -70,7 +72,7 @@
     .user_input ion-input {
         font-family: none;
         text-transform: none;
-        color: rgb(53, 50, 50);
+        color: rgb(14, 13, 13);
         --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
@@ -81,12 +83,12 @@
     //Sign In Button styles
     .signin_btn {
         --border-radius: 25px;
-        --background: rgb(114, 93, 167);
+        // --background: rgb(114, 93, 167);
     }
     
     // Forgot pasword
     .forgot_password {
-        margin-top: 20px;
+        margin-top: 15px;
         color: blue;
         display: flex;
         justify-content: center;
@@ -95,26 +97,47 @@
     }
     
     // Media Querry
-    @media only screen and (min-height: 600px) {
+    @media only screen and (min-height: 500px) {
+        .signin_btn {
+            --background: red;
+        }
         .logo {
-            margin: 5% 0%;
+            margin: 0% 0%;
         }
         .line {
-            margin: 4% 0%;
+            margin: 0% 0%;
         }
         .signin_btn {
-            margin-top: 6%;
+            margin-top: 1%;
         }
     }
     
-    @media only screen and (min-height: 800px) {
+    @media only screen and (min-height: 600px) {
+        .signin_btn {
+            --background: green;
+        }
         .logo {
-            margin: 8% 0%;
+            margin: 2% 0%;
         }
         .line {
-            margin: 8% 0%;
+            margin: 3% 0%;
         }
         .signin_btn {
-            margin-top: 8%;
+            margin-top: 4%;
+        }
+    }
+    
+    @media only screen and (min-height: 700px) {
+        .signin_btn {
+            --background: blue;
+        }
+        .logo {
+            margin: 9% 0%;
+        }
+        .line {
+            margin: 9% 0%;
+        }
+        .signin_btn {
+            margin-top: 9%;
         }
     }

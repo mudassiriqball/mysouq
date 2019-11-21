@@ -9,12 +9,15 @@ import { SigninPageRoutingModule } from './signin-routing.module';
 import { SigninPage } from './signin.page';
 import  '../../components/social-buttons/social-buttons.component';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     SigninPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [SigninPage]
 })
