@@ -1,0 +1,18 @@
+ion-header {
+    height: 25%;
+    // background: #967ADC;
+    background: rgb(114, 93, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-title {
+    bottom: 10%;
+    text-align: center;
+    color: white;
+}
+
+ion-icon {
+    color: rgb(114, 93, 167);
+}

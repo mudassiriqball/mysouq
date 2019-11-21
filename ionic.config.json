@@ -1,0 +1,7 @@
+{
+  "name": "mysouq",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
