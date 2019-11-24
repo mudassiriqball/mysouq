@@ -7,15 +7,7 @@
     </ion-title>
 </ion-toolbar>
 
-<ion-content class="ion-no-padding">
-    <ion-item>
-        <ion-label>Select Language</ion-label>
-        <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
-            <ion-select-option value="en">English</ion-select-option>
-            <ion-select-option value="ar">العربية</ion-select-option>
-        </ion-select>
-    </ion-item>
-
+<ion-content class="ion-no-padding abc">
     <ion-grid>
         <ion-row>
             <ion-col>
@@ -26,13 +18,13 @@
         </ion-row>
         <ion-row>
             <ion-col>
-                <ion-button expand="block" class="gmail_btn">
+                <ion-button class="ion-no-padding" expand="block" class="gmail_btn">
                     <ion-icon slot="start" ios="ios-mail" md="md-mail"></ion-icon>
                     <ion-label>{{ 'gmail' | translate:params }}</ion-label>
                 </ion-button>
-                <ion-button expand="block" class="facebook_btn">
-                    <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
-                    <ion-label>{{ 'gmail' | translate:params }}</ion-label>
+                <ion-button class="ion-no-padding" expand="block" class="facebook_btn">
+                    <ion-icon slot="start" ios="logo-facebook" md="logo-facebook"></ion-icon>
+                    <ion-label>{{ 'facebook' | translate:params }}</ion-label>
                 </ion-button>
             </ion-col>
         </ion-row>

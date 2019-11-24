@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'register',
@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'signin',
     loadChildren: './pages/signin/signin.module#SigninPageModule'
+  },
+  {
+    path: 'setting',
+    loadChildren: () => import('./pages/setting/setting.module').then( m => m.SettingPageModule)
   }
 ];
 

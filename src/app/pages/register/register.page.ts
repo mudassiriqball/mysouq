@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterPage implements OnInit {
 
   constructor() {
-    this.varified = true;
+    this.code_sended = false;
    }
-  varified: boolean;
+  code_sended: boolean;
+
   ngOnInit() {
+  }
+
+  onSendCodeClick() {
+    this.code_sended = true;
   }
 
   onSignupBtnClick() {

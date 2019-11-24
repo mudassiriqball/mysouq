@@ -1,143 +1,100 @@
-    ion-toolbar {
-        --background: rgb(114, 93, 167);
-        color: white;
-        font-family: none;
-        text-transform: none;
-        --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
-    // .background {
-    //     height: 100%;
-    //     background: rgb(62, 67, 117);
-    //     background: linear-gradient(0deg, rgba(62, 67, 117, 1) 0%, rgba(209, 189, 206, 1) 54%, rgba(186, 175, 172, 1) 89%, rgba(146, 152, 175, 1) 99%);
-    // }
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 30%;
+    padding: 0em;
+    margin: 0em;
+}
+
+// Gmail and Facebook Buttons styles
+.gmail_btn {
+    --border-radius: 25px;
+    --background: #D44638;
+    text-transform: none;
+}
+
+.facebook_btn {
+    --border-radius: 25px;
+    --background: #3b5998;
+    text-transform: none;
+}
+
+.gmail_btn ion-label,
+.facebook_btn ion-label,
+.signin_btn ion-label {
+    margin-left: 10px;
+}
+
+// Draw line:   "------ OR -------"
+.line {
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+}
+
+//User input styles
+.user_input {
+    padding: 10px 0px;
+}
+
+.user_input ion-item {
+    --background: transparent;
+}
+
+.eye {
+    display: flex;
+}
+
+//Sign In Button styles
+.signin_btn {
+    --border-radius: 25px;
+    text-transform: none;
+}
+
+// Forgot pasword
+.forgot_password {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+// Media Querry
+@media only screen and (min-height: 500px) {
     .logo {
-        display: flex;
-        justify-content: center;
+        margin: 0% 0%;
     }
-    
-    .logo img {
-        width: 30%;
-        padding: 0em;
-        margin: 0em;
-    }
-    
-    // Gmail and Facebook Buttons styles
-    .gmail_btn {
-        --border-radius: 25px;
-        --background: #D44638;
-    }
-    
-    .facebook_btn {
-        --border-radius: 25px;
-        --background: #3b5998;
-    }
-    
-    .gmail_btn ion-label,
-    .facebook_btn ion-label,
-    .signin_btn ion-label {
-        font-family: none;
-        text-transform: none;
-        --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin-left: 10px;
-    }
-    
-    // Draw line:   "------ OR -------"
     .line {
-        display: flex;
-        justify-content: center;
-        color: rgb(216, 115, 0);
-        font-size: smaller;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0% 0%;
     }
-    
-    //User input styles
-    .user_input {
-        padding: 10px 0px;
-        background: rgba(150, 122, 220, 0.315);
-    }
-    
-    .user_input ion-item {
-        --background: transparent;
-    }
-    
-    .user_input ion-icon,
-    .user_input ion-label {
-        font-family: none;
-        text-transform: none;
-        color: rgb(114, 93, 167);
-        --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
-    .user_input ion-input {
-        font-family: none;
-        text-transform: none;
-        color: rgb(14, 13, 13);
-        --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
-    .eye {
-        display: flex;
-    }
-    
-    //Sign In Button styles
     .signin_btn {
-        --border-radius: 25px;
-        // --background: rgb(114, 93, 167);
+        margin-top: 1%;
     }
-    
-    // Forgot pasword
-    .forgot_password {
-        margin-top: 15px;
-        color: blue;
-        display: flex;
-        justify-content: center;
-        font-size: small;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media only screen and (min-height: 600px) {
+    .logo {
+        margin: 2% 0%;
     }
-    
-    // Media Querry
-    @media only screen and (min-height: 500px) {
-        .signin_btn {
-            --background: red;
-        }
-        .logo {
-            margin: 0% 0%;
-        }
-        .line {
-            margin: 0% 0%;
-        }
-        .signin_btn {
-            margin-top: 1%;
-        }
+    .line {
+        margin: 3% 0%;
     }
-    
-    @media only screen and (min-height: 600px) {
-        .signin_btn {
-            --background: green;
-        }
-        .logo {
-            margin: 2% 0%;
-        }
-        .line {
-            margin: 3% 0%;
-        }
-        .signin_btn {
-            margin-top: 4%;
-        }
+    .signin_btn {
+        margin-top: 4%;
     }
-    
-    @media only screen and (min-height: 700px) {
-        .signin_btn {
-            --background: blue;
-        }
-        .logo {
-            margin: 9% 0%;
-        }
-        .line {
-            margin: 9% 0%;
-        }
-        .signin_btn {
-            margin-top: 9%;
-        }
+}
+
+@media only screen and (min-height: 700px) {
+    .logo {
+        margin: 5% 0%;
     }
+    .line {
+        margin: 5% 0%;
+    }
+    .signin_btn {
+        margin-top: 5%;
+    }
+}

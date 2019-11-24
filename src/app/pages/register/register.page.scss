@@ -1,78 +1,70 @@
- ion-toolbar {
-     --background: rgb(114, 93, 167);
-     color: white;
-     font-family: none;
-     text-transform: none;
-     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- 
- .personal_info {
-     display: flex;
-     justify-content: center;
-     text-align: center;
-     margin-bottom: 5%;
- }
- 
- //User input styles
- .min_text {
-     max-width: 50px;
-     padding: 5px 0px;
-     //   margin: 0px 0px 0px -5px;
-     //  border: none;
-     //  border-right: 1px solid rgb(194, 191, 191);
- }
- 
- .resend_btn {
-     --background: none;
-     --color: rgb(114, 93, 167);
- }
- 
- .user_input ion-item {
-     --background: transparent;
- }
- 
- .user_input ion-icon,
- .user_input ion-label {
-     font-family: none;
-     text-transform: none;
-     color: rgb(114, 93, 167);
-     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- 
- .user_input ion-input {
-     font-family: none;
-     text-transform: none;
-     color: rgb(53, 50, 50);
-     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- 
- .sigup_btn,
- .snd_verificaton_code {
-     --border-radius: 25px;
-     font-family: none;
-     text-transform: none;
-     --background: rgb(114, 93, 167);
-     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- 
- // Media Querry
- @media only screen and (min-height: 400px) {
-     .facebook_btn {
-         margin-top: 5%;
-     }
-     .line {
-         margin: 5% 0%;
-     }
-     .next_btn {
-         margin-top: 5%;
-     }
- }
- 
- @media only screen and (min-height: 700px) {
-     .line {
-         margin: 8% 0%;
-     }
-     .next_btn {
-         margin-top: 8%;
-     }
- }
+//  ion-toolbar {
+//      //  --background: rgb(114, 93, 167);
+//      color: white;
+//      //  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//  }
+.personal_info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+//User input styles
+//  .resend_btn {
+//      --background: none;
+//     //  --color: rgb(114, 93, 167);
+//  }
+.user_input ion-item {
+    --background: transparent;
+}
+
+//  .user_input ion-icon,
+//  .user_input ion-label {
+//     //  color: rgb(114, 93, 167);
+//      //  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//  }
+//  .user_input ion-input {
+//      color: rgb(53, 50, 50);
+//      //  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//  }
+.sigup_btn,
+.snd_verificaton_code {
+    --border-radius: 25px;
+    //  --background: rgb(114, 93, 167);
+    //  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+// Media Querry
+@media only screen and (min-height: 400px) {
+    .facebook_btn {
+        margin-top: 5%;
+    }
+    .line {
+        margin: 5% 0%;
+    }
+    .next_btn {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (min-height: 700px) {
+    .line {
+        margin: 8% 0%;
+    }
+    .next_btn {
+        margin-top: 8%;
+    }
+}
+
+// $customColors: ('white', 'info', 'gold', 'silver', 'bronze', 'correct', 'wrong', 'gray');
+// @each $color in $customColors {
+//     .ion-color-#{$color} {
+//         --ion-color-base: var(--ion-color-#{$color}) !important;
+//         --ion-color-base-rgb: var(--ion-color-#{$color}-rgb) !important;
+//         --ion-color-contrast: var(--ion-color-#{$color}-contrast) !important;
+//         --ion-color-contrast-rgb: var(--ion-color-#{$color}-contrast-rgb) !important;
+//         --ion-color-shade: var(--ion-color-#{$color}-shade) !important;
+//         --ion-color-tint: var(--ion-color-#{$color}-tint) !important;
+//     }
+// }

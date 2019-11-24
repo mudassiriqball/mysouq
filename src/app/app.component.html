@@ -2,17 +2,30 @@
     <ion-split-pane contentId="main-content">
         <ion-menu contentId="main-content" type="overlay">
             <ion-header>
-                <ion-title>My Souq</ion-title>
+                <ion-toolbar>
+                    <ion-title class="center">
+                        <ion-chip>
+                            <ion-avatar>
+                                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                            </ion-avatar>
+                        </ion-chip>
+                    </ion-title>
+                    <ion-title class="center">
+                        Mr.X
+                    </ion-title>
+                </ion-toolbar>
             </ion-header>
             <ion-content>
                 <ion-list>
                     <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-                        <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-                            <ion-icon slot="start" [name]="p.icon"></ion-icon>
-                            <ion-label>
-                                {{p.title}}
-                            </ion-label>
-                        </ion-item>
+                        <ion-card>
+                            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+                                <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                                <ion-label color="secondary">
+                                    {{p.title}}
+                                </ion-label>
+                            </ion-item>
+                        </ion-card>
                     </ion-menu-toggle>
                 </ion-list>
             </ion-content>

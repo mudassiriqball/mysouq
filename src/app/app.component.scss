@@ -1,18 +1,10 @@
 ion-header {
     height: 25%;
-    // background: #967ADC;
-    background: rgb(114, 93, 167);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: initial;
 }
 
-ion-title {
-    bottom: 10%;
+.center {
     text-align: center;
-    color: white;
-}
-
-ion-icon {
-    color: rgb(114, 93, 167);
 }
