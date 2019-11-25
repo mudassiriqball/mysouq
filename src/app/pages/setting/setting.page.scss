@@ -1,11 +1,23 @@
-.color_picker {
-    margin-top: 15px;
-    width: 100px;
-    float: right;
+// Color picker label (primary, primary_text, background, text) styles:
+.color_picker_label {
+    position: relative;
+    margin-left: 6%;
+    width: 70%;
+    float: left;
+    margin-top: 7px;
 }
 
-div {
-    padding: 20px;
-    margin: 0px 2.3%;
-    border: 1px solid;
+// Color picker box styles:
+.color_picker {
+    position: relative;
+    margin-right: 6%;
+    padding-bottom: 5px;
+    width: 15%;
+    float: right;
+    border-bottom: 1px solid gray;
+}
+
+// Apply Theme button for selected colors:
+.apply_theme_btn {
+    margin: 3% 6%;
 }

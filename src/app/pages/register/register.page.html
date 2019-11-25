@@ -24,27 +24,11 @@
                 </ion-item>
             </ion-col>
         </ion-row>
-
-
-        <ion-row>
-            <ion-col>
-                <ion-item>
-                    <ion-icon name="person" slot="start"></ion-icon>
-                    <ion-input placeholder="Shoped Based in*"></ion-input>
-                </ion-item>
-                <ion-item>
-                    <ion-icon ios="ios-call" slot="start" md=" md-call "></ion-icon>
-                    <ion-input placeholder="Shoped Based in* "></ion-input>
-                    <ion-icon ios="ios-medical" color="danger" style="font-size: 12px;" md="md-medical"></ion-icon>
-
-                </ion-item>
-            </ion-col>
-        </ion-row>
         <!--  -->
         <!-- Send verification code -->
         <ion-row>
             <ion-col>
-                <ion-button expand="block " color="gold" (click)="onSendCodeClick() " class="snd_verificaton_code ">
+                <ion-button expand="block " (click)="onSendCodeClick() " class="snd_verificaton_code ">
                     Send Verification Code
                 </ion-button>
             </ion-col>
@@ -67,12 +51,12 @@
                 <ion-col>
                     <ion-item>
                         <ion-icon name="lock " slot="start "></ion-icon>
-                        <ion-input type="password " placeholder="Password "></ion-input>
+                        <ion-input type="password" placeholder="Password"></ion-input>
                         <ion-icon class="eye " name="eye " slot="end "></ion-icon>
                     </ion-item>
                     <ion-item>
                         <ion-icon name="lock " slot="start "></ion-icon>
-                        <ion-input type="password " placeholder="Confirm Password "></ion-input>
+                        <ion-input type="password" placeholder="Confirm Password"></ion-input>
                         <ion-icon class="eye " name="eye " slot="end "></ion-icon>
                     </ion-item>
                 </ion-col>
@@ -109,7 +93,7 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button color="gold" (click)="onSignupBtnClick() " class="sigup_btn " expand="block ">
+                    <ion-button (click)="onSignupBtnClick() " class="sigup_btn " expand="block ">
                         Sign Up
                     </ion-button>
                 </ion-col>

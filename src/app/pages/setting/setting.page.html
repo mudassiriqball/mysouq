@@ -3,69 +3,86 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>setting</ion-title>
+        <ion-title>
+            {{'settings_page.title' | translate}}
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-
     <!-- Change Language -->
-    <ion-item-divider>Language </ion-item-divider>
+    <ion-item-divider>{{'settings_page.language_setting' | translate}}</ion-item-divider>
     <ion-card [ngStyle]="{'color': card_text_color}">
-        <ion-item>
-            <ion-label>Language Setting</ion-label>
+        <ion-item lines="none">
+            <ion-label>{{'settings_page.change_language' | translate}}</ion-label>
             <ion-select placeholder="{{currentLang}}" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
                 <ion-select-option *ngFor="let item of langList" value="{{item.val}}"> {{item.text}} </ion-select-option>
             </ion-select>
         </ion-item>
     </ion-card>
+    <!-- /Change Language end -->
 
     <!-- Change Theme -->
-    <ion-item-divider>Theme Setting</ion-item-divider>
+    <ion-item-divider>{{'settings_page.theme_setting' | translate}}</ion-item-divider>
     <ion-card [ngStyle]="{'color': card_text_color}">
-        <ion-item>
-            <ion-label>Select Theme</ion-label>
+        <!-- Select Theme -->
+        <ion-item lines="none">
+            <ion-label>{{'settings_page.change_theme' | translate}}</ion-label>
             <ion-select placeholder="{{currentTheme}}" [(ngModel)]="selectedTheme" (ionChange)="themeChanged()">
                 <ion-select-option *ngFor="let item of themeList" value="{{item}}"> {{item}} </ion-select-option>
             </ion-select>
         </ion-item>
-        <ion-item>
-            <ion-label>Select Theme</ion-label>
-            <ion-icon name="arrow-dropdown-circle" (click)="customizeColorPanel()"></ion-icon>
+        <!-- /Select Theme end -->
+        <!-- Show/hide customize theme -->
+        <ion-item lines="none">
+            <ion-label>{{'settings_page.customize_theme' | translate}}</ion-label>
+            <ion-icon *ngIf="!colorPanel" name="arrow-dropdown-circle" (click)="customizeColorPanel()"></ion-icon>
+            <ion-icon *ngIf="colorPanel" name="arrow-dropup-circle" (click)="customizeColorPanel()"></ion-icon>
         </ion-item>
-        <!--  -->
+        <!-- /Show/hide customize theme end-->
     </ion-card>
-    <div *ngIf="colorPanel" ngStyle="{'border-color': card_text_color}">
-        <ion-label>background</ion-label>
-        <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
-        <ion-item-divider></ion-item-divider>
-        <ion-label class="color_picker_label">background</ion-label>
-        <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
-        <ion-item-divider></ion-item-divider>
-        <ion-label class="color_picker_label">background</ion-label>
-        <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
-        <ion-item-divider></ion-item-divider>
-        <ion-label class="color_picker_label">background</ion-label>
-        <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
-        <ion-item-divider></ion-item-divider>
-        <ion-label class="color_picker_label">background</ion-label>
-        <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
-    </div>
-    <input class="color_picker" cpPosition="left" [(colorPicker)]="color" [style.background]="color" />
 
-    <!-- Change Font border: 1px solid red; -->
-    <ion-item-divider></ion-item-divider>
-    <ion-item-divider>Font Setting</ion-item-divider>
+
+    <!-- Customize Theme Panel -->
+    <!-- Primary Color Input style="margin-top:10px" -->
+    <ion-label *ngIf="colorPanel" class="color_picker_label">{{'settings_page.primary' | translate}}</ion-label>
+    <ion-label *ngIf="colorPanel" class="color_picker" style="margin-top: 8px;" [(colorPicker)]="primary_color" cpOKButton="true" [style.background]="primary_color" [style.color]="primary_color">{{'settings_page.select' | translate}}</ion-label>
+    <!-- /Primary Color Input end-->
+
+    <!-- Primary Text Color Input -->
+    <ion-label *ngIf="colorPanel" class="color_picker_label">{{'settings_page.primary_text' | translate}}</ion-label>
+    <ion-label *ngIf="colorPanel" class="color_picker" [(colorPicker)]="primary_text_color" cpOKButton="true" [style.background]="primary_text_color" [style.color]="primary_text_color">{{'settings_page.select' | translate}}</ion-label>
+    <!-- /Primary Text Color Input end -->
+
+    <!-- Background Color Input -->
+    <ion-label *ngIf="colorPanel" class="color_picker_label">{{'settings_page.background' | translate}}</ion-label>
+    <ion-label *ngIf="colorPanel" class="color_picker" [(colorPicker)]="background_color" [style.background]="background_color" cpOKButton="true" [style.color]="background_color">{{'settings_page.select' | translate}}</ion-label>
+    <!-- /Background Color Input end-->
+
+    <!-- Text Color Input -->
+    <ion-label *ngIf="colorPanel" class="color_picker_label">{{'settings_page.text' | translate}}</ion-label>
+    <ion-label *ngIf="colorPanel" class="color_picker" [(colorPicker)]="text_color" cpOKButton="true" [style.background]="text_color" [style.color]="text_color">{{'settings_page.select' | translate}}</ion-label>
+    <!-- /Text Color Input end-->
+
+    <!-- Apply Theme Button -->
+    <ion-item-divider class="ion-no-padding" no-lines class="divider" *ngIf="colorPanel"></ion-item-divider>
+    <ion-button *ngIf="colorPanel" class="apply_theme_btn" expand="block" (click)="customizeTheme()">{{'settings_page.apply_theme' | translate}}</ion-button>
+    <!-- /Apply Theme Button end -->
+
+    <!-- /Customize Theme Panel end -->
+    <!-- /Change Theme end-->
+
+    <!-- Change Font -->
+    <ion-item-divider>{{'settings_page.font_setting' | translate}}</ion-item-divider>
     <ion-card [ngStyle]="{'color': card_text_color}">
-        <ion-item style="text-decoration: none;">
-            <ion-label>Font</ion-label>
-            <ion-select placeholder="{{currentTheme}} " [(ngModel)]="selectedTheme " (ionChange)="themeChanged() ">
-                <ion-select-option *ngFor="let item of themeList " value="{{item}} "> {{item}} </ion-select-option>
+        <ion-item lines="none">
+            <ion-label>{{'settings_page.change_font' | translate}}</ion-label>
+            <ion-select placeholder="{{currentFont}}" [(ngModel)]="selectedFont" (ionChange)="fontChanged()">
+                <ion-select-option *ngFor="let item of fontList" value="{{item.val}}"> {{item.text}} </ion-select-option>
             </ion-select>
         </ion-item>
     </ion-card>
-
-    <!-- <input [(colorPicker)]="color " [style.background]="color " /> -->
+    <!-- /Change Font end-->
 
 
 </ion-content>

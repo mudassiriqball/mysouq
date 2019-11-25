@@ -1,9 +1,34 @@
 {
-    "gmail": "Signin with Gmail",
-    "facebook": "Sign in with Facebook",
-    "or": "OR",
-    "username": "Username",
-    "password": "Password",
-    "signin": "Sign In",
-    "forgot_password": "Forgot your password?"
+    "signin_page": {
+        "title": "Sign In",
+        "gmail": "Signin with Gmail",
+        "facebook": "Sign in with Facebook",
+        "or": "OR",
+        "username": "Username",
+        "password": "Password",
+        "signin": "Sign In",
+        "forgot_password": "Forgot your password?"
+    },
+    "sidemenu": {
+        "Home": "Home",
+        "Signin": "Sign In",
+        "Register": "Register as Shop",
+        "Settings": "Settings"
+    },
+    "settings_page": {
+        "title": "Settings",
+        "language_setting": "Language Setting",
+        "change_language": "Change Language",
+        "theme_setting": "Theme Setting",
+        "change_theme": "Change Theme",
+        "customize_theme": "Customize Theme",
+        "primary": "Primary",
+        "select": "select",
+        "primary_text": "Primary Text",
+        "background": "Background",
+        "text": "Text",
+        "apply_theme": "Apply Theme",
+        "font_setting": "Font Setting",
+        "change_font": "Change Font"
+    }
 }

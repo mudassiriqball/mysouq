@@ -1,3 +1,4 @@
+import { ThemeService } from 'src/app/services/theme.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -47,4 +48,5 @@ export function LanguageLoader(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+}

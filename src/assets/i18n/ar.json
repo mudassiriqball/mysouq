@@ -1,9 +1,34 @@
 {
-    "gmail": "تسجيل الدخول مع جوجل",
-    "facebook": "قم بتسجيل الدخول باستخدام الفيسبوك",
-    "or": "أو",
-    "username": "اسم المستخدم",
-    "password": "كلمه السر",
-    "signin": "تسجيل الدخول",
-    "forgot_password": "نسيت رقمك السري؟"
+    "signin_page": {
+        "title": "تسجيل الدخول",
+        "gmail": "تسجيل الدخول مع جوجل",
+        "facebook": "قم بتسجيل الدخول باستخدام الفيسبوك",
+        "or": "أو",
+        "username": "اسم المستخدم",
+        "password": "كلمه السر",
+        "signin": "تسجيل الدخول",
+        "forgot_password": "نسيت رقمك السري؟"
+    },
+    "sidemenu": {
+        "Home": "الصفحة  الرئيسية",
+        "Signin": "تسجيل  الدخول",
+        "Register": "سجل  كمحل",
+        "Settings": "الإعدادات"
+    },
+    "settings_page": {
+        "title": "الإعدادات",
+        "language_setting": "إعدادات  اللغة",
+        "change_language": "غير  اللغة",
+        "theme_setting": "إعداد  الموضوع",
+        "change_theme": "غير  الخلفية",
+        "customize_theme": "تخصيص  الموضوع",
+        "primary": "ابتدائي",
+        "select": "تحديد",
+        "primary_text": "النص  الأساسي",
+        "background": "خلفية",
+        "text": "نص",
+        "apply_theme": "تطبيق  موضوع",
+        "font_setting": "إعداد  الخط",
+        "change_font": "تغيير  الخط"
+    }
 }

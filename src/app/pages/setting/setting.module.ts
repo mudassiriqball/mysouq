@@ -7,6 +7,7 @@ import { SettingPage } from './setting.page';
 
 // Color Picker
 import { ColorPickerModule } from 'ngx-color-picker';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
     FormsModule,
     IonicModule,
     ColorPickerModule,
-    SettingPageRoutingModule
+    SettingPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [SettingPage]
 })
