@@ -17,6 +17,8 @@
     },
     "settings_page": {
         "title": "Settings",
+        "account_settings": "Account Settings",
+        "account": "Account",
         "language_setting": "Language Setting",
         "change_language": "Change Language",
         "theme_setting": "Theme Setting",
@@ -31,4 +33,5 @@
         "font_setting": "Font Setting",
         "change_font": "Change Font"
     }
+    
 }

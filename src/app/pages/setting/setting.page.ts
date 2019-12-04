@@ -1,9 +1,11 @@
+import { AccountSettingsPage } from './../account-settings/account-settings.page';
 import { LanguageService } from './../../services/language.service';
 import { Component } from '@angular/core';
 // Theme Service:
 import { ThemeService } from 'src/app/services/theme.service';
 // Alert Controller to show alerts:
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 // Themes list for Predefined themes in change theme option
 const themes = {
@@ -69,7 +71,9 @@ export class SettingPage {
   constructor(
     private themeservice: ThemeService,
     private languageService: LanguageService,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private router: Router,
+    private navController: NavController
   ) {
     this.currentLang = this.languageService.currLanguage;  // Taking current language name from language service;
     this.currentTheme = this.themeservice.currTheme;  // Taking current Theme name from theme service;
@@ -143,6 +147,11 @@ export class SettingPage {
   selectedFont: any = null;
   currentFont: string;
 
+  // Navigate to account-settings page:
+  navigateToAccountSettingPage() {
+    // this.router.navigateByUrl('/setting/account-settings');
+    // this.navController.push(AccountSettingsPage);
+  }
 
   // Change Language
   languageChanged() {

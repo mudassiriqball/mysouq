@@ -10,6 +10,16 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
+    <!-- Account Settings -->
+    <ion-item-divider>{{'settings_page.account_settings' | translate}}</ion-item-divider>
+    <ion-card [ngStyle]="{'color': card_text_color}">
+        <ion-item lines="none">
+            <ion-label>{{'settings_page.account' | translate}}</ion-label>
+        </ion-item>
+    </ion-card>
+    <!-- /Account Settings end -->
+
     <!-- Change Language -->
     <ion-item-divider>{{'settings_page.language_setting' | translate}}</ion-item-divider>
     <ion-card [ngStyle]="{'color': card_text_color}">
@@ -83,6 +93,6 @@
         </ion-item>
     </ion-card>
     <!-- /Change Font end-->
-
+    <!-- https://github.com/mudassiriqball/mysouq-wender.git -->
 
 </ion-content>

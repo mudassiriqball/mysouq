@@ -17,6 +17,8 @@
     },
     "settings_page": {
         "title": "الإعدادات",
+        "account_settings": "إعدادات الملف الشخصي",
+        "account": "الملف الشخصي",
         "language_setting": "إعدادات  اللغة",
         "change_language": "غير  اللغة",
         "theme_setting": "إعداد  الموضوع",
