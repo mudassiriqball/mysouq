@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SigninPageRoutingModule } from './signin-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { SigninPage } from './signin.page';
-
+import { LoginPage } from './login.page';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    SigninPageRoutingModule,
+    LoginPageRoutingModule,
     TranslateModule.forChild(),
   ],
-  declarations: [SigninPage]
+  declarations: [LoginPage]
 })
-export class SigninPageModule {}
+export class LoginPageModule {}

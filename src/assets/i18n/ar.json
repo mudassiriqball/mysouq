@@ -7,7 +7,7 @@
         "username": "اسم المستخدم",
         "password": "كلمه السر",
         "signin": "تسجيل الدخول",
-        "forgot_password": "نسيت رقمك السري؟"
+        "forgot_password": " أو نسيت رقمك السري؟"
     },
     "sidemenu": {
         "Home": "الصفحة  الرئيسية",

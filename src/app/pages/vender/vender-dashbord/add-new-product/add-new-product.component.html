@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="'cancel'" (click)="dismiss()" defaultHref="vender-dashbord"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addNewProductForm">
+    <ion-grid>
+      <ion-row color="justify-content-center">
+        <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <h4 *ngIf="!product" style="text-align: center;">Add New Product</h4>
+            <h3 *ngIf="product">Edit Product</h3>
+          </div>
+          <div class="ion-padding">
+            <ion-item>
+              <ion-input formControlName="name" type="text" placeholder="Name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="ibn" type="text" placeholder="IBN Number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="author" type="text" placeholder="author"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="image_url" type="text" placeholder="image url">
+              </ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-padding">
+            <ion-button [disabled]="addNewProductForm.invalid" (click)="save()" type="submit" expand="block">SAVE ! &nbsp;
+              <ion-spinner *ngIf="loading"></ion-spinner>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

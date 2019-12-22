@@ -12,26 +12,37 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'register',
-    loadChildren: './pages/register/register.module#RegisterPageModule'
-  },
-
-  {
-    path: 'signin',
-    loadChildren: './pages/signin/signin.module#SigninPageModule'
-  },
-  {
     path: 'setting',
     children: [ 
       {
         path: '',
         loadChildren: './pages/setting/setting.module#SettingPageModule'
       },
-      {
-        path: 'account-settings',
-        loadChildren: './pages/account-settings/account-settings.module#AccountSettingsPageModule'
-      }
+      // {
+      //   path: 'account-settings',
+      //   loadChildren: './pages/account-settings/account-settings.module#AccountSettingsPageModule'
+      // }
     ]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./pages/sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'register-as-shop',
+    loadChildren: () => import('./pages/vender/register-as-shop/register-as-shop.module').then( m => m.RegisterAsShopPageModule)
+  },
+  {
+    path: 'vender-dashbord',
+    loadChildren: () => import('./pages/vender/vender-dashbord/vender-dashbord.module').then( m => m.VenderDashbordPageModule)
+  },
+  {
+    path: 'vender-dashbord',
+    loadChildren: () => import('./pages/vender/vender-dashbord/vender-dashbord.module').then( m => m.VenderDashbordPageModule)
   }
 ];
 

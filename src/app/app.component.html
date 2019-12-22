@@ -11,6 +11,9 @@
                     <ion-label class="llabel">
                         Mr.X
                     </ion-label>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-label routerDirection="'root'" routerLink="/login">Login/Signup</ion-label>
+                    </ion-menu-toggle>
                 </div>
             </ion-toolbar>
             <ion-content>
@@ -22,13 +25,13 @@
                                 {{ 'sidemenu.Home' | translate }}
                             </ion-label>
                         </ion-item>
-                        <ion-item routerDirection="'root'" routerLink="/signin">
+                        <!-- <ion-item routerDirection="'root'" routerLink="/">
                             <ion-icon slot="start" name="log-in"></ion-icon>
                             <ion-label color="secondary">
                                 {{ 'sidemenu.Signin' | translate }}
                             </ion-label>
-                        </ion-item>
-                        <ion-item routerDirection="'root'" routerLink="/register">
+                        </ion-item> -->
+                        <ion-item routerDirection="'root'" routerLink="/register-as-shop">
                             <ion-icon slot="start" name="person-add"></ion-icon>
                             <ion-label color="secondary">
                                 {{ 'sidemenu.Register' | translate }}

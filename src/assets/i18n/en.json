@@ -7,7 +7,7 @@
         "username": "Username",
         "password": "Password",
         "signin": "Sign In",
-        "forgot_password": "Forgot your password?"
+        "forgot_password": "Forgot your password? or"
     },
     "sidemenu": {
         "Home": "Home",

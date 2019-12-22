@@ -1,0 +1,111 @@
+.forgotPswrd_signup{
+    font-size: small;
+    display: block;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 30%;
+    padding: 0em;
+    margin: 0em;
+}
+// <ion-toolbar>
+//   <ion-buttons slot="start">
+//       <ion-menu-button></ion-menu-button>
+//   </ion-buttons>
+//   <ion-title class="ion-text-center">
+//       {{ 'signin_page.title' | translate }}
+//   </ion-title>
+// </ion-toolbar>
+
+// <ion-content class="ion-no-padding abc">  
+//   <ion-grid>
+    //   <ion-row>
+    //       <ion-col>
+    //           <div class="logo">
+    //               <img src="/assets/icons/icon.png" alt="">
+    //           </div>
+    //       </ion-col>
+    //   </ion-row>
+//       <ion-row>
+//           <ion-col>
+//               <ion-button class="ion-no-padding" expand="block" class="gmail_btn">
+//                   <ion-icon slot="start" ios="ios-mail" md="md-mail"></ion-icon>
+//                   <ion-label>{{ 'signin_page.gmail' | translate }}</ion-label>
+//               </ion-button>
+//               <ion-button class="ion-no-padding" expand="block" class="facebook_btn" (click)="fbClicked()">
+//                   <ion-icon slot="start" ios="logo-facebook" md="logo-facebook"></ion-icon>
+//                   <ion-label>{{ 'signin_page.facebook' | translate }}</ion-label>
+//               </ion-button>
+//           </ion-col>
+//       </ion-row>
+//       <ion-row>
+//           <ion-col>
+//               <div class="line">
+//                   <label>--------------- {{ 'signin_page.or'| translate }} ---------------</label>
+//               </div>
+//           </ion-col>
+//       </ion-row>
+//       <ion-row>
+//           <ion-col>
+//               <!-- <div class="user_input">
+//                   <ion-item>
+//                       <ion-icon name="person" slot="start"></ion-icon>
+//                       <ion-input placeholder="{{ 'signin_page.username' | translate  }}"></ion-input>
+//                   </ion-item>
+//                   <ion-item>
+//                       <ion-icon name="lock" slot="start"></ion-icon>
+//                       <ion-input type="password" placeholder="{{ 'signin_page.password' | translate  }}"></ion-input>
+
+//                       <ion-icon class="eye" name="eye" slot="end"></ion-icon>
+//                   </ion-item>
+//               </div> -->
+//               <form [formGroup]="loginForm">
+//                   <ion-grid>
+//                       <ion-row color="justify-content-center">
+//                           <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+
+//                               <div class="ion-padding">
+
+//                                   <ion-item>
+//                                       <ion-input name="email" formControlName="email" type="email"
+//                                           placeholder="your@email.com"></ion-input>
+//                                   </ion-item>
+//                                   <ion-item>
+//                                       <ion-input name="password" formControlName="password" type="password"
+//                                           placeholder="Password"></ion-input>
+//                                   </ion-item>
+//                               </div>
+//                               <div class="ion-padding">
+//                                   <ion-button [disabled]="loginForm.invalid" (click)="save()" type="submit"
+//                                       expand="block">Login
+//                                   </ion-button>
+//                               </div>
+//                           </ion-col>
+//                       </ion-row>
+//                   </ion-grid>
+//               </form>
+//           </ion-col>
+//       </ion-row>
+//       <ion-row>
+//           <ion-col class="signin_forgot_pswrd_div">
+//               <!-- <ion-button expand="block" class="signin_btn">
+//                   <ion-icon slot="start" ios="ios-log-in" md="md-log-in"></ion-icon>
+//                   <ion-label>{{ 'signin_page.signin' | translate }}</ion-label>
+//               </ion-button> -->
+//               <ion-label class="forgot_password">
+//                   {{ 'signin_page.forgot_password' | translate }}
+//               </ion-label>
+//               <ion-label class="forgot_password" (click)="signup()" > 
+//                   Signup
+//               </ion-label>
+//           </ion-col>
+//       </ion-row>
+//   </ion-grid>
+// </ion-content>

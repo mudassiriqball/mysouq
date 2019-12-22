@@ -1,4 +1,3 @@
-import { AccountSettingsPage } from './../account-settings/account-settings.page';
 import { LanguageService } from './../../services/language.service';
 import { Component } from '@angular/core';
 // Theme Service:
@@ -146,12 +145,6 @@ export class SettingPage {
   // Font variables:
   selectedFont: any = null;
   currentFont: string;
-
-  // Navigate to account-settings page:
-  navigateToAccountSettingPage() {
-    // this.router.navigateByUrl('/setting/account-settings');
-    // this.navController.push(AccountSettingsPage);
-  }
 
   // Change Language
   languageChanged() {
