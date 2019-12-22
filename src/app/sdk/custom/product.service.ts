@@ -1,8 +1,3 @@
-// import { Injectable } from '@angular/core';
-// import { MySouqConfig } from '../mysouq.config';
-// import { Observable } from 'rxjs';
-// import { HttpClient } from '@angular/common/http';
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { AuthService } from './../core/auth.service';
@@ -16,7 +11,7 @@ export class ProductService {
   constructor(private http: HttpClient, private authService: AuthService) { }
 
   public async getAllProducts(): Promise<any> {
-    const url = MySouqConfig.getPath() + '/books';
+    const url = MySouqConfig.getPath() + '/products';
     const token = await this.authService.getTokenFromStorage();
     return this.http.get(url, {
       headers: new HttpHeaders().set('Authorization', token)
@@ -24,7 +19,7 @@ export class ProductService {
   }
 
   public async addNewProduct(data: object): Promise<any> {
-    const url = MySouqConfig.getPath() + '/books/add';
+    const url = MySouqConfig.getPath() + '/products/add';
     const token = await this.authService.getTokenFromStorage();
 
     return this.http.post(url, data, {
@@ -32,7 +27,7 @@ export class ProductService {
     });
   }
   public async updateProduct(data): Promise<any> {
-    const url = MySouqConfig.getPath() + `/books/${data._id}`;
+    const url = MySouqConfig.getPath() + `/product/${data._id}`;
     // const token = await this.authService.getTokenFromStorage();
     const token = 'blabla';
     return this.http.put(url, data, {
@@ -40,7 +35,7 @@ export class ProductService {
     });
   }
   public async deleteProduct(id: string): Promise<any> {
-    const url = MySouqConfig.getPath() + `/books/${id}`;
+    const url = MySouqConfig.getPath() + `/product/${id}`;
     const token = await this.authService.getTokenFromStorage();
 
     return this.http.delete(url, {

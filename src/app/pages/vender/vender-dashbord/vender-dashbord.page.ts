@@ -15,10 +15,10 @@ export class VenderDashbordPage implements OnInit {
 
   loading = false;
   deleteLoading = false;
-  books: Products[] = [];
-  bookIconPath = 'assets/icon/product.png';
+  products: Products[] = [];
+  productIconPath = 'assets/icon/product.png';
   skeletonlist = [1, 2, 3, 4, 5];
-  selectedBook: Products;
+  selectedProduct: Products;
   constructor(
     private productService: ProductService,
     private modalController: ModalController,
@@ -36,7 +36,7 @@ export class VenderDashbordPage implements OnInit {
     const observable = await this.productService.getAllProducts();
     observable.subscribe(
       data => {
-        this.books = data.data.docs;
+        this.products = data.data.docs;
         this.loading = false;
         console.log('data', data);
       },
@@ -63,7 +63,7 @@ export class VenderDashbordPage implements OnInit {
   }
 
   async delete(product) {
-    this.selectedBook = product;
+    this.selectedProduct = product;
     const alert = await this.alertController.create({
       header: 'Confirm!',
       message: `Are you sure you want to delete the product "${product.name}"`,
@@ -79,7 +79,7 @@ export class VenderDashbordPage implements OnInit {
         {
           text: 'Okay',
           handler: () => {
-            this.deleteBook();
+            this.deleteProduct();
           }
         }
       ]
@@ -87,10 +87,10 @@ export class VenderDashbordPage implements OnInit {
     await alert.present();
   }
 
-  async deleteBook() {
+  async deleteProduct() {
     this.deleteLoading = true;
     const observable = await this.productService.deleteProduct(
-      this.selectedBook._id
+      this.selectedProduct._id
     );
 
     observable.subscribe(

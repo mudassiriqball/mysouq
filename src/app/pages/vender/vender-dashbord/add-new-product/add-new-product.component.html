@@ -20,10 +20,20 @@
               <ion-input formControlName="name" type="text" placeholder="Name"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input formControlName="ibn" type="text" placeholder="IBN Number"></ion-input>
+              <ion-input formControlName="size" type="text" placeholder="Product size"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input formControlName="author" type="text" placeholder="author"></ion-input>
+              <ion-input formControlName="quantity" type="text" placeholder="Product quantity"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Product Category</ion-label>
+              <ion-select formControlName="category" placeholder="Select One">
+                <ion-select-option value="women_fashion">Women Fashion</ion-select-option>
+                <ion-select-option value="men_fashion">Man Fashion</ion-select-option>
+                <ion-select-option value="cloths">Cloths</ion-select-option>
+                <ion-select-option value="watches">Watches</ion-select-option>
+                <ion-select-option value="shoes">Shoes</ion-select-option>
+              </ion-select>
             </ion-item>
             <ion-item>
               <ion-input formControlName="image_url" type="text" placeholder="image url">

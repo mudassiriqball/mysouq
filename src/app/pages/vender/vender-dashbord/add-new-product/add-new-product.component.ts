@@ -34,8 +34,9 @@ export class AddNewProductComponent implements OnInit {
     this.addNewProductForm = this.formBuilder.group({
       _id: [null],
       name: [null, [Validators.required]],
-      ibn: [null, [Validators.required]],
-      author: [null, [Validators.required]],
+      size: [null],
+      quantity: [null, [Validators.required]],
+      category: [null, [Validators.required]],
       is_deleted: [false, [Validators.required]],
       image_url: ['']
     });
@@ -68,7 +69,7 @@ export class AddNewProductComponent implements OnInit {
       }
     );
   }
-  async updateBook() {
+  async updateProduct() {
     const observable = await this.productService.updateProduct(
       this.addNewProductForm.value
     );
@@ -101,7 +102,7 @@ export class AddNewProductComponent implements OnInit {
     this.loading = true;
 
     if (this.product) {
-      this.updateBook();
+      this.updateProduct();
     } else {
       this.addNew();
     }
