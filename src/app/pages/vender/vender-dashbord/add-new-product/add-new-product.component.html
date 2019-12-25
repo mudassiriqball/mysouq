@@ -27,7 +27,7 @@
             </ion-item>
             <ion-item>
               <ion-label>Product Category</ion-label>
-              <ion-select formControlName="category" placeholder="Select One">
+              <ion-select formControlName="category" placeholder="Select One" (ionChange)="onCountryChange()">
                 <ion-select-option value="women_fashion">Women Fashion</ion-select-option>
                 <ion-select-option value="men_fashion">Man Fashion</ion-select-option>
                 <ion-select-option value="cloths">Cloths</ion-select-option>
@@ -35,13 +35,19 @@
                 <ion-select-option value="shoes">Shoes</ion-select-option>
               </ion-select>
             </ion-item>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+              <ion-fab-button (click)="getPictures()">
+                <ion-icon name="add"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
             <ion-item>
               <ion-input formControlName="image_url" type="text" placeholder="image url">
               </ion-input>
             </ion-item>
           </div>
           <div class="ion-padding">
-            <ion-button [disabled]="addNewProductForm.invalid" (click)="save()" type="submit" expand="block">SAVE ! &nbsp;
+            <ion-button [disabled]="addNewProductForm.invalid" (click)="save()" type="submit" expand="block">SAVE !
+              &nbsp;
               <ion-spinner *ngIf="loading"></ion-spinner>
             </ion-button>
           </div>

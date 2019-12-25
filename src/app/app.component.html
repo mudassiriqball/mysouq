@@ -9,10 +9,11 @@
                         </ion-avatar>
                     </ion-card-header>
                     <ion-label class="llabel">
-                        Mr.X
+                        {{ user_name }}
                     </ion-label>
                     <ion-menu-toggle auto-hide="false">
-                        <ion-label routerDirection="'root'" routerLink="/login">Login/Signup</ion-label>
+                        <ion-label *ngIf="!login" routerDirection="'root'" routerLink="/login">Login/Signup</ion-label>
+                        <ion-label *ngIf="login" (click)="logout()">Logout</ion-label>
                     </ion-menu-toggle>
                 </div>
             </ion-toolbar>

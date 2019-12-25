@@ -8,6 +8,7 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [

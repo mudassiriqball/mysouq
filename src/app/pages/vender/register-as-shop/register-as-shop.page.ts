@@ -5,6 +5,7 @@ import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UserService } from '../../../sdk/custom/user.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register-as-shop',
@@ -16,7 +17,8 @@ export class RegisterAsShopPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private navController: NavController,
   ) { }
   registerForm: FormGroup;
   loading = false;
@@ -51,7 +53,7 @@ export class RegisterAsShopPage implements OnInit {
       data => {
         console.log('got response from server', data);
         this.loading = false;
-        this.router.navigateByUrl('/home');
+        this.navController.navigateRoot('/vender-dashbord');
       },
       error => {
         this.loading = false;

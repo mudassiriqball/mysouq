@@ -17,6 +17,6 @@ export class AuthService {
   }
   public async logout() {
     this.storage.clear();
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/home');
   }
 }

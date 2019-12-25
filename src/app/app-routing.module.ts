@@ -26,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: './pages/login/login.module#LoginPageModule'
   },
   {
     path: 'sign-up',
@@ -42,8 +42,12 @@ const routes: Routes = [
   },
   {
     path: 'vender-dashbord',
-    loadChildren: () => import('./pages/vender/vender-dashbord/vender-dashbord.module').then( m => m.VenderDashbordPageModule)
+    loadChildren: './pages/vender/vender-dashbord/vender-dashbord.module#VenderDashbordPageModule'
   }
+  // {
+  //   path: 'vender-dashbord',
+  //   loadChildren: () => import('./pages/vender/vender-dashbord/vender-dashbord.module').then( m => m.VenderDashbordPageModule)
+  // }
 ];
 
 @NgModule({

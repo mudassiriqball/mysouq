@@ -16,6 +16,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 export function LanguageLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -30,7 +31,6 @@ export function LanguageLoader(http: HttpClient) {
     IonicStorageModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -43,6 +43,7 @@ export function LanguageLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+    ImagePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
