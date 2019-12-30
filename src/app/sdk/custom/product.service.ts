@@ -9,16 +9,15 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
   constructor(private http: HttpClient, private authService: AuthService) { }
-
+  selectedProduct: any;
   public async getAllProducts(): Promise<any> {
     const url = MySouqConfig.getPath() + '/products';
-    const token = await this.authService.getTokenFromStorage();
-    return this.http.get(url, {
-      headers: new HttpHeaders().set('Authorization', token)
-    });
+    // const token = await this.authService.getTokenFromStorage();
+    return this.http.get(url);
   }
 
   public async addNewProduct(data: object): Promise<any> {
+    console.log("asdfghjklkjhgfdsdfghjkjhgfdsdfghj:", data);
     const url = MySouqConfig.getPath() + '/products/add';
     const token = await this.authService.getTokenFromStorage();
 
@@ -35,7 +34,7 @@ export class ProductService {
     });
   }
   public async deleteProduct(id: string): Promise<any> {
-    const url = MySouqConfig.getPath() + `/product/${id}`;
+    const url = MySouqConfig.getPath() + `/products/${id}`;
     const token = await this.authService.getTokenFromStorage();
 
     return this.http.delete(url, {

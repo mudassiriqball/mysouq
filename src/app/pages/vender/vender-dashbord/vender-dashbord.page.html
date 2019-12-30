@@ -1,34 +1,44 @@
 <ion-header>
-  <ion-toolbar >
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">My Souq</ion-title>
+    <ion-title class="ion-text-center">Vendor Dashboard</ion-title>
     <ion-button slot="end" (click)="openAddModal()" color="success">
       Add New </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <!-- <div *ngIf="!loading">
-    <ion-list>
-      <ion-item *ngFor="let book of books">
-        <ion-thumbnail slot="start">
-          <ion-img *ngIf="book.image_url && book.image_url!='null'" [src]="book.image_url">
-          </ion-img>
-          <ion-img *ngIf="!book.image_url ||  book.image_url=='null' " [src]="'assets/icon/book.png'">
-          </ion-img>
-        </ion-thumbnail>
-        <ion-label>{{book.name}}</ion-label>
-        <ion-button (click)="openEditPopup(book)" fill="clear">
+<ion-content>
+
+  <div *ngIf="!loading">
+    <ion-card style="display: flex;" *ngFor="let product of products">
+
+      <ion-thumbnail slot="start">
+        <img *ngIf="product.category == 'women_fashion'" src="../../../assets//icons//womenfashion.jpg" alt="" />
+        <img *ngIf="product.category == 'men_fashion'" src="../../../assets//icons//menfashion.jpg" alt="" />
+        <img *ngIf="product.category == 'shoes'" src="../../../assets//icons//shoes.jpg" alt="" />
+        <img *ngIf="product.category == 'watches'" src="../../../assets//icons//watch.jpg" alt="" />
+        <img *ngIf="product.category == 'shirts'" src="../../../assets//icons//shirt.jpg" alt="" />
+        <img *ngIf="product.category == 'pants'" src="../../../assets//icons//pant.jpg" alt="" />
+      </ion-thumbnail>
+      <ion-item>
+        <ion-title style="color: black;" (click)="getDetails(product)" routerDirection="'root'"
+          routerLink="/product-details">{{product.name}}</ion-title>
+        <ion-card-header (click)="getDetails(product)" routerDirection="'root'" routerLink="/product-details">
+          {{product.category}}</ion-card-header>
+      </ion-item>
+      <ion-item slot="start">
+        <ion-button (click)="openEditPopup(product)" fill="clear">
           <ion-icon name="create" slot="end"></ion-icon>
         </ion-button>
-        <ion-button fill="clear" (click)="delete(book)">
+        <ion-button fill="clear" (click)="delete(product)">
           <ion-icon name="trash" slot="end"></ion-icon>
         </ion-button>
       </ion-item>
-    </ion-list>
-  </div> -->
+    </ion-card>
+  </div>
+
 
   <div>
     <ion-list>

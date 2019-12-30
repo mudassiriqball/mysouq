@@ -26,13 +26,13 @@
                                 {{ 'sidemenu.Home' | translate }}
                             </ion-label>
                         </ion-item>
-                        <!-- <ion-item routerDirection="'root'" routerLink="/">
+                        <ion-item *ngIf="vendor"  routerDirection="'root'" routerLink="/vender-dashbord">
                             <ion-icon slot="start" name="log-in"></ion-icon>
                             <ion-label color="secondary">
-                                {{ 'sidemenu.Signin' | translate }}
+                                Dash Board
                             </ion-label>
-                        </ion-item> -->
-                        <ion-item routerDirection="'root'" routerLink="/register-as-shop">
+                        </ion-item>
+                        <ion-item *ngIf="!vendor" routerDirection="'root'" routerLink="/register-as-shop">
                             <ion-icon slot="start" name="person-add"></ion-icon>
                             <ion-label color="secondary">
                                 {{ 'sidemenu.Register' | translate }}

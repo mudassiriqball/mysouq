@@ -16,7 +16,7 @@ export class VenderDashbordPage implements OnInit {
   loading = false;
   deleteLoading = false;
   products: Products[] = [];
-  productIconPath = 'assets/icon/product.png';
+  productIconPath = 'assets/icon/girl.jpg';
   skeletonlist = [1, 2, 3, 4, 5];
   selectedProduct: Products;
   constructor(
@@ -32,16 +32,15 @@ export class VenderDashbordPage implements OnInit {
 
   async getAll() {
     this.loading = true;
-
     const observable = await this.productService.getAllProducts();
     observable.subscribe(
       data => {
         this.products = data.data.docs;
+        console.log('data aa gya hy', data);
         this.loading = false;
-        console.log('data', data);
       },
       err => {
-        console.log('err', err);
+        console.log('err aa agi hy zalim', err);
       }
     );
   }
@@ -79,7 +78,7 @@ export class VenderDashbordPage implements OnInit {
         {
           text: 'Okay',
           handler: () => {
-            this.deleteProduct();
+            this.deleteProduct(product);
           }
         }
       ]
@@ -87,12 +86,11 @@ export class VenderDashbordPage implements OnInit {
     await alert.present();
   }
 
-  async deleteProduct() {
+  async deleteProduct(product) {
     this.deleteLoading = true;
     const observable = await this.productService.deleteProduct(
-      this.selectedProduct._id
+      product._id
     );
-
     observable.subscribe(
       data => {
         console.log('got response from server', data);
@@ -105,15 +103,19 @@ export class VenderDashbordPage implements OnInit {
       }
     );
   }
+
+  getDetails(product) {
+    this.productService.selectedProduct = product;
+  }
 }
 
 // Intefacing is Optional
 
 interface Products {
   name: string;
-  ibn: string;
+  size: string;
+  quantity: string;
+  category: string;
   _id?: string;
-  image_url: string;
-  author: string;
   is_deleted: boolean;
 }

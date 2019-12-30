@@ -32,8 +32,9 @@
         "@ngx-translate/http-loader": "^4.0.0",
         "color": "^3.1.2",
         "cordova-android": "8.1.0",
+        "cordova-browser": "6.0.0",
         "cordova-ios": "5.0.1",
-        "cordova-plugin-camera": "^4.1.0",
+        "cordova-plugin-filepath": "^1.5.6",
         "cordova-plugin-telerik-imagepicker": "^2.3.3",
         "core-js": "^2.6.11",
         "jwt-decode": "^2.2.0",
@@ -89,11 +90,13 @@
             "cordova-plugin-telerik-imagepicker": {},
             "cordova-plugin-camera": {
                 "ANDROID_SUPPORT_V4_VERSION": "27.+"
-            }
+            },
+            "cordova-plugin-filepath": {}
         },
         "platforms": [
             "android",
-            "ios"
+            "ios",
+            "browser"
         ]
     }
 }

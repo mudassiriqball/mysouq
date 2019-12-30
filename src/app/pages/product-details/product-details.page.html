@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Product Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <img *ngIf="product.category == 'women_fashion'" src="../../../assets/icons/womenfashion.jpg" alt="" />
+        <img *ngIf="product.category == 'men_fashion'" src="../../../assets/icons/menfashion.jpg" alt="" />
+        <img *ngIf="product.category == 'shoes'" src="../../../assets/icons/shoes.jpg" alt="" />
+        <img *ngIf="product.category == 'watches'" src="../../../assets/icons/watch.jpg" alt="" />
+        <img *ngIf="product.category == 'shirts'" src="../../../assets/icons/shirt.jpg" alt="" />
+        <img *ngIf="product.category == 'pants'" src="../../../assets/icons/pant.jpg" alt="" />
+      </ion-card-header>
+      <ion-item>
+        Name: {{ product.name }}
+      </ion-item>
+      <ion-item>
+        Size: {{ product.size }}
+      </ion-item>
+      <ion-item>
+        Quantity: {{ product.quantity }}
+      </ion-item>
+      <ion-item>
+        Category: {{ product.category }}
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

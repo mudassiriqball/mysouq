@@ -1,6 +1,7 @@
+import { async } from '@angular/core/testing';
 import { Component } from '@angular/core';
 
-import { Platform, Events } from '@ionic/angular';
+import { Platform, Events, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 //  Language service:
@@ -28,6 +29,7 @@ const defaults = {
 export class AppComponent {
   user_name: any;
   login: boolean;
+  vendor: boolean;
 
   constructor(
     private platform: Platform,
@@ -37,7 +39,8 @@ export class AppComponent {
     private themeService: ThemeService,
     private storage: Storage,
     private authService: AuthService,
-    public events: Events
+    public events: Events,
+    private navController: NavController,
     // private userService: UserService,
   ) {
     storage.get('theme').then(theme => {
@@ -63,6 +66,17 @@ export class AppComponent {
     });
 
     this.checkLogin();
+
+    events.subscribe('loggedin', async (username) => {
+      await this.setLoginInfo(true, username);
+    });
+
+    events.subscribe('logged', async (data) => {
+      if (data == "vender") {
+        this.vendor = true;
+      }
+    });
+
     this.initializeApp();
   }
 
@@ -71,25 +85,27 @@ export class AppComponent {
     if (token == null) {
       this.login = false;
       this.user_name = "";
+      this.vendor = false;
     } else {
-
-      this.events.subscribe('loggedin', (data) => {
-        this.login = data;
-        const tokenValue = decode(token);
-        console.log("token value:", tokenValue.data.name);
-        this.user_name = tokenValue.data.name;
-      });
-
-      // this.login = true;
-      // const tokenValue = decode(token);
-      // console.log("token value:", tokenValue.data.name);
-      // this.user_name = tokenValue.data.name;
+      const tokenValue = decode(token).data.name;
+      if (decode(token).data.role == "vender") {
+        this.vendor = true;
+      } else {
+        this.vendor = false;
+      }
+      this.setLoginInfo(true, tokenValue);
     }
+  }
+
+  async setLoginInfo(data, username) {
+    this.login = data;
+    this.user_name = username;
   }
 
   public async logout() {
     await this.authService.logout();
     this.checkLogin();
+    this.navController.navigateRoot('/home');
   }
 
   initializeApp() {

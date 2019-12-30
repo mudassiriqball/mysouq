@@ -53,7 +53,7 @@ export class RegisterAsShopPage implements OnInit {
       data => {
         console.log('got response from server', data);
         this.loading = false;
-        this.navController.navigateRoot('/vender-dashbord');
+        this.navController.navigateRoot('/login');
       },
       error => {
         this.loading = false;

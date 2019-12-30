@@ -43,6 +43,10 @@ const routes: Routes = [
   {
     path: 'vender-dashbord',
     loadChildren: './pages/vender/vender-dashbord/vender-dashbord.module#VenderDashbordPageModule'
+  },
+  {
+    path: 'product-details',
+    loadChildren: () => import('./pages/product-details/product-details.module').then( m => m.ProductDetailsPageModule)
   }
   // {
   //   path: 'vender-dashbord',

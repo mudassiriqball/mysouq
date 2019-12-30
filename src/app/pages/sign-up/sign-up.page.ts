@@ -42,21 +42,20 @@ export class SignUpPage implements OnInit {
       ]
     });
   }
-  save() {
-    this.loading = true;
 
+  signup() {
+    this.loading = true;
     this.userService.userRegister(this.registerForm.value).subscribe(
-      data => {
-        console.log('got response from server', data);
+      async data => {
         this.loading = false;
         this.navController.navigateBack('/login');
       },
       error => {
         this.loading = false;
-        console.log('error', error);
       }
     );
   }
+
   matchOtherValidator(otherControlName: string) {
     return (control: AbstractControl): { [key: string]: any } => {
       const otherControl: AbstractControl = control.root.get(otherControlName);
