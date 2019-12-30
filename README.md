@@ -8,6 +8,7 @@ Main feathure:
   5. Edit product
   6. Setting Page which have the ability to
         i.   Change language (English or Arabic)
+        ![Alt text](/Screenshot_Cange_language.png?raw=true "Optional Title")
         ii.  Change the theme of the entire app (there are some predefined themes but user can also make their own fonts)
         iii. Change the font style for entire app
         
