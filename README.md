@@ -2,10 +2,9 @@ This is an ecommerce apllication for uploading and displaying the products.
 There are two main roles on for vender(Shopkeper): which can upload the products to sail, and other is customer which buy the products.
 Main feathure:
 
-## 1 **User Signup, Login:**
-  
-        ![Alt text](/login_screenshot.png?raw=true "Optional Title")
-        ![Alt text](/Screenshot_Signup.png?raw=true "Optional Title")
+## 1 **User Signup, Login**
+![Alt text](/login_screenshot.png?raw=true "Optional Title")
+![Alt text](/Screenshot_Signup.png?raw=true "Optional Title")
   
 ## 2 **Vendor Registration**
 ![Alt text](/Screenshot_Register_as_vender(shop).png?raw=true "Optional Title")
@@ -28,7 +27,7 @@ Main feathure:
 
 ------------------
 ## 7 **Edit Product**
-Alt text](/Screenshot_addproduct.png?raw=true "Optional Title")
+!Alt text](/Screenshot_addproduct.png?raw=true "Optional Title")
 
 ------------------
 ## 8 **Setting Page** which have the ability to
