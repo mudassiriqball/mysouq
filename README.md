@@ -1,5 +1,5 @@
-**This is an ecommerce apllication for uploading and displaying the products.
-There are two main roles on for vender(Shopkeper): which can upload the products to sail, and other is customer which buy the products.
+**This is an ionic mobile app for ecommerce apllication to uploading and displaying the products for vendors(sellers) and buyers.
+There are two main roles on for vender(Shopkeper/Seller): which will upload the products to sell, and other is customer which buy the products by using this app.
 Main feathure**
 
 ## 1 **User Signup, Login**
