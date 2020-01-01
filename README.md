@@ -1,8 +1,8 @@
-## **This is an ionic mobile app for ecommerce apllication to uploading and displaying the products for vendors(sellers) and buyers.**
-## **There are two main roles on for vender(Shopkeper/Seller): which will upload the products to sell, and other is customer which buy the products by using this app.**
+## This is an **Ionic Mobile App** for ecommerce apllication to uploading and displaying the products for vendors(sellers) and buyers.**
+## There are two main roles on for vender(Shopkeper/Seller): which will upload the products to sell, and other is customer which buy the products by using this app.
 ------------------   
-## **This app interects the (mysouqapi) node api which is hosted on the network and then this api interects with database and perform the operations. The node api controls all the authentications.**
-**The node api link is: [mysouqapi](https://github.com/mudassiriqball/mysouqapi)**
+## This app interects the **(mysouqapi) node api** which is hosted on the network and then this api interects with database and perform the operations. The node api controls all the authentications. The **MongoDb** is used to store the data.
+The node api link is: [mysouqapi](https://github.com/mudassiriqball/mysouqapi)
 
 ------------------   
 # **Main feathure**
